@@ -1,13 +1,14 @@
 package com.cloud.northwindstore.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity(name = "Product")
 @Table(name = "Products", indexes = {
         @Index(name = "ProductName", columnList = "ProductName")
 })
-public class Product {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ProductID", nullable = false)

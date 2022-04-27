@@ -20,6 +20,10 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("/product")
     public ResponseEntity<List<Product>> getAllProducts(){
 
@@ -36,6 +40,11 @@ public class ProductController {
         }
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/product/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable("id") Integer id){
         try {
@@ -48,6 +57,5 @@ public class ProductController {
         catch (Exception ex){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 }
