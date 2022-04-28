@@ -19,13 +19,11 @@ public class Order {
     @Column(name = "OrderID", nullable = false)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CustomerID")
-    private Customer customerID;
+    private String customerID;
 
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EmployeeID")
-    private Employee employeeID;
+    private Integer employeeID;
 
     @Column(name = "OrderDate")
     private Instant orderDate;
@@ -149,19 +147,19 @@ public class Order {
         this.orderDate = orderDate;
     }
 
-    public Employee getEmployeeID() {
+    public Integer getEmployeeID() {
         return employeeID;
     }
 
-    public void setEmployeeID(Employee employeeID) {
+    public void setEmployeeID(Integer employeeID) {
         this.employeeID = employeeID;
     }
 
-    public Customer getCustomerID() {
+    public String getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(Customer customerID) {
+    public void setCustomerID(String customerID) {
         this.customerID = customerID;
     }
 
