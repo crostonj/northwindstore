@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpahibernateApplication {
+public class NorthwindApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JpahibernateApplication.class, args);
+		SpringApplication.run(NorthwindApp.class, args);
 	}
 
 }

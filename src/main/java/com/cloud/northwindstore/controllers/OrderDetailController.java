@@ -2,8 +2,6 @@ package com.cloud.northwindstore.controllers;
 
 
 import com.cloud.northwindstore.model.OrderDetail;
-import com.cloud.northwindstore.repository.OrderDetailRepository;
-import com.cloud.northwindstore.services.OrderDetailService;
 import com.cloud.northwindstore.services.OrderDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

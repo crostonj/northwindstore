@@ -6,6 +6,9 @@ import java.time.Instant;
 
 @Entity(name = "Order")
 @Table(name = "Orders", indexes = {
+        @Index(name = "CustomersOrders", columnList = "CustomerID"),
+        @Index(name = "ShippersOrders", columnList = "ShipVia"),
+        @Index(name = "EmployeesOrders", columnList = "EmployeeID"),
         @Index(name = "ShippedDate", columnList = "ShippedDate"),
         @Index(name = "ShipPostalCode", columnList = "ShipPostalCode"),
         @Index(name = "OrderDate", columnList = "OrderDate")
@@ -37,7 +40,7 @@ public class Order {
     @JoinColumn(name = "ShipVia")
     private Shipper shipVia;
 
-    @Column(name = "Freight", precision = 10, scale = 4)
+    @Column(name = "Freight", precision = 19, scale = 4)
     private BigDecimal freight;
 
     @Column(name = "ShipName", length = 40)

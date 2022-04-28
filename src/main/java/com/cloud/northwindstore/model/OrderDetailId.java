@@ -4,12 +4,13 @@ import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
 public class OrderDetailId implements Serializable {
-    private static final long serialVersionUID = -5026330716740119588L;
+    private static final long serialVersionUID = -8529290347376506215L;
     @Column(name = "OrderID", nullable = false)
     private Integer orderID;
     @Column(name = "ProductID", nullable = true)
